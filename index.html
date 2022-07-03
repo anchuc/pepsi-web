@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Pepsi Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="sec">
+
+        <header>
+            <a href="#"><img src="file:///C:/Users/Lenovo/Documents/pepsi%20web/logo.png" alt="" class="logo"></a>
+            <div class="toggleMenu" onclick="menuToggle();"></div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">What's new</a></li>
+                <li><a href="#">Newsletter</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+
+        <div class="content">
+
+            <div class="textBox">
+                <h2>That's What<br><span>I like</span></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <a href="#">View All Products</a>
+            </div>
+
+            <div class="imgBox">
+                <img src="file:///C:/Users/Lenovo/Documents/pepsi%20web/pepsi001.png" class="pepsi">
+            </div>
+        </div>
+
+        <ul class="thumb">
+            <li><img src="file:///C:/Users/Lenovo/Documents/pepsi%20web/pepsi001.png" onclick="imgSlider('file:///C:/Users/Lenovo/Documents/pepsi%20web/pepsi001.png'); changeColor('#0062be')"></li>
+            <li><img src="file:///C:/Users/Lenovo/Documents/pepsi%20web/pepsi002.png" onclick="imgSlider('file:///C:/Users/Lenovo/Documents/pepsi%20web/pepsi002.png'); changeColor('#e60c2c')"></li>
+            <li><img src="file:///C:/Users/Lenovo/Documents/pepsi%20web/pepsi003.png" onclick="imgSlider('file:///C:/Users/Lenovo/Documents/pepsi%20web/pepsi003.png'); changeColor('#151515')"></li>
+        </ul>
+
+        <ul class="sci">
+            <li>
+                <a href="#"><img src="file:///C:/Users/Lenovo/Documents/pepsi%20web/facebook.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="file:///C:/Users/Lenovo/Documents/pepsi%20web/instagram.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="file:///C:/Users/Lenovo/Documents/pepsi%20web/twitter.png" alt=""></a>
+            </li>
+        </ul>
+
+    </section>
+
+    <script type="text/javascript">
+        function imgSlider(anything) {
+            document.querySelector('.pepsi').src = anything;
+        }
+
+        function changeColor(color) {
+            const sec = document.querySelector('.sec');
+            sec.style.backgroundColor = color;
+        }
+
+        function menuToggle() {
+            const toggleMenu = document.querySelector('.toggleMenu');
+            const navigation = document.querySelector('.navigation');
+            toggleMenu.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
